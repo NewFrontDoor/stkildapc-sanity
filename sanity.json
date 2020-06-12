@@ -1,0 +1,51 @@
+{
+  "root": true,
+  "project": {
+    "name": "stkilda"
+  },
+  "api": {
+    "projectId": "o0yv210b",
+    "dataset": "production"
+  },
+  "plugins": [
+    "@sanity/base",
+    "@sanity/components",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/desk-tool",
+    "@sanity/vision",
+    "@sanity/color-input",
+    "@sanity/google-maps-input",
+    "@sanity/dashboard",
+    "dashboard-widget-feed",
+    "dashboard-widget-structure-menu",
+    "my-studio-logo",
+    "s3-upload-widget"
+  ],
+  "parts": [
+    {
+      "implements": "part:@sanity/dashboard/config",
+      "path": "./dashboardConfig.js"
+    },
+    {
+      "name": "part:@sanity/base/schema",
+      "path": "./schemas/schema.js"
+    },
+    {
+      "name": "part:@sanity/desk-tool/structure",
+      "path": "./structure.js"
+    },
+    {
+      "implements": "part:@sanity/base/theme/variables/override-style",
+      "path": "variableOverrides.css"
+    },
+    {
+      "name": "part:@sanity/base/initial-value-templates",
+      "path": "./initialValueTemplates.js"
+    },
+    {
+      "name": "part:@sanity/base/new-document-structure",
+      "path": "./newDocumentStructure.js"
+    }
+  ]
+}

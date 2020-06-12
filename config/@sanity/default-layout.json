@@ -1,0 +1,6 @@
+{
+  "toolSwitcher": {
+    "order": ["dashboard", "desk"],
+    "hidden": ["vision"]
+  }
+}
