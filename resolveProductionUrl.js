@@ -2,7 +2,7 @@ const previewSecret = '032ac2eecbe611ea87d00242ac130003'; // Copy the string you
 const projectUrl =
   process.env.NODE_ENV === 'development'
     ? 'http://localhost:3000'
-    : 'http://stkildapc.org';
+    : 'https://stkildapc.org';
 
 
 export default function resolveProductionUrl(document) {
