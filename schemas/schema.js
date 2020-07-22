@@ -16,11 +16,6 @@ import segment from './segment';
 import page from './page';
 import modals from './modals';
 import link from './link';
-import {
-  formObject as form,
-  formField as formfield,
-  formArrayField as formarrayfield
-} from '@newfrontdoor/form';
 import LayoutHome from './LayoutHome';
 import GalleryHome from './GalleryHome';
 import LayoutMap from './LayoutMap';
@@ -55,10 +50,7 @@ export default createSchema({
     author,
     modals,
     link,
-    form,
     article,
-    formfield,
-    formarrayfield,
     LayoutHome,
     GalleryHome,
     LayoutMap,

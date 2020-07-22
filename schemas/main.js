@@ -3,64 +3,39 @@ export default {
   title: 'Main',
   type: 'document',
   __experimental_actions: [/* 'create', */ 'update', /* 'delete', */ 'publish'],
+  fieldsets: [
+    {
+      name: 'header',
+      title: 'Header/Menu items',
+      options: {
+        collapsible: true, // Makes the whole fieldset collapsible
+        collapsed: false // Defines if the fieldset should be collapsed by default or not
+      }
+    },
+    {
+      name: 'body',
+      title: 'Body items',
+      options: {
+        collapsible: true, // Makes the whole fieldset collapsible
+        collapsed: false // Defines if the fieldset should be collapsed by default or not
+      }
+    },
+    {
+      name: 'footer',
+      title: 'Footer items',
+      options: {
+        collapsible: true, // Makes the whole fieldset collapsible
+        collapsed: false // Defines if the fieldset should be collapsed by default or not
+      }
+    }
+  ],
   fields: [
     {
       title: 'Home page heading',
       name: 'heading',
       description: 'This is your main welcome text',
-      type: 'string'
-    },
-    {
-      title: 'Main image',
-      name: 'mainImage',
-      type: 'image'
-    },
-    {
-      title: 'Service details',
-      name: 'services',
-      description:
-        'This is a collection of service details output to the main page',
-      type: 'array',
-      of: [
-        {
-          type: 'object',
-          fields: [
-            {
-              title: 'Address',
-              name: 'address',
-              type: 'reference',
-              to: [{type: 'address'}]
-            },
-            {
-              title: 'Page',
-              name: 'page',
-              type: 'reference',
-              to: [{type: 'page'}]
-            },
-            {title: 'Button text', name: 'text', type: 'string'}
-          ]
-        }
-      ]
-    },
-    {
-      name: 'tagline',
-      title: 'Tag line',
-      type: 'string'
-    },
-    {
-      title: 'Main page segments',
-      name: 'content',
-      description:
-        'Add segments below to feature on the front page, create segments using the segment menu to the left',
-      type: 'array',
-      of: [
-        {
-          type: 'reference',
-          title: 'Segment',
-          description: 'Pick a segment from the dropdown list below',
-          to: [{type: 'LayoutHome'}, {type: 'GalleryHome'}, {type: 'LayoutMap'}]
-        }
-      ]
+      type: 'string',
+      fieldset: 'header'
     },
     {
       title: 'Main menu items',
@@ -101,7 +76,64 @@ export default {
             }
           ]
         }
-      ]
+      ],
+      fieldset: 'header'
+    },
+    {
+      title: 'Main image',
+      name: 'mainImage',
+      type: 'image',
+      fieldset: 'body'
+    },
+    {
+      title: 'Service details',
+      name: 'services',
+      description:
+        'This is a collection of service details output to the main page',
+      type: 'array',
+      of: [
+        {
+          type: 'object',
+          fields: [
+            {
+              title: 'Address',
+              name: 'address',
+              type: 'reference',
+              to: [{type: 'address'}]
+            },
+            {
+              title: 'Page',
+              name: 'page',
+              type: 'reference',
+              to: [{type: 'page'}]
+            },
+            {title: 'Button text', name: 'text', type: 'string'}
+          ]
+        }
+      ],
+      fieldset: 'body'
+    },
+    {
+      title: 'Main page segments',
+      name: 'content',
+      description:
+        'Add segments below to feature on the front page, create segments using the segment menu to the left',
+      type: 'array',
+      of: [
+        {
+          type: 'reference',
+          title: 'Segment',
+          description: 'Pick a segment from the dropdown list below',
+          to: [{type: 'LayoutHome'}, {type: 'GalleryHome'}, {type: 'LayoutMap'}]
+        }
+      ],
+      fieldset: 'body'
+    },
+    {
+      name: 'tagline',
+      title: 'Tag line',
+      type: 'string',
+      fieldset: 'footer'
     },
     {
       title: 'Footer menu items',
@@ -126,7 +158,8 @@ export default {
             }
           ]
         }
-      ]
+      ],
+      fieldset: 'footer'
     },
     {
       title: 'Social media links',
@@ -144,7 +177,14 @@ export default {
               scheme: ['https', 'mailto', 'tel']
             })
         }
-      ]
+      ],
+      fieldset: 'footer'
+    },
+    {
+      name: 'copyright',
+      title: 'Copyright',
+      type: 'string',
+      fieldset: 'footer'
     }
   ]
 };

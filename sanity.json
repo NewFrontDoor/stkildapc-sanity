@@ -20,7 +20,9 @@
     "dashboard-widget-feed",
     "dashboard-widget-structure-menu",
     "my-studio-logo",
-    "s3-upload-widget"
+    "s3-upload-widget",
+    "@newfrontdoor/form",
+    "@sanity/production-preview"
   ],
   "parts": [
     {
@@ -46,6 +48,10 @@
     {
       "name": "part:@sanity/base/new-document-structure",
       "path": "./newDocumentStructure.js"
+    },
+    {
+      "implements": "part:@sanity/production-preview/resolve-production-url",
+      "path": "./resolveProductionUrl.js"
     }
   ]
 }
