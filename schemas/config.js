@@ -32,6 +32,11 @@ export default {
           type: 'themecolor'
         }
       ]
+    },
+    {
+      name: 'defaultcontactemail',
+      title: 'Default form submission email',
+      type: 'email'
     }
   ]
 };
