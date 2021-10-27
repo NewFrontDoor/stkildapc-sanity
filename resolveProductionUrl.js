@@ -1,4 +1,4 @@
-const previewSecret = '032ac2eecbe611ea87d00242ac130003'; // Copy the string you used for SANITY_PREVIEW_SECRET
+const previewSecret = process.env.SANITY_STUDIO_PREVIEW_SECRET; // ensure this is set in .env before deploying
 const projectUrl =
   process.env.NODE_ENV === 'development'
     ? 'http://localhost:3000'
