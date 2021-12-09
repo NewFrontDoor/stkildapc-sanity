@@ -29,6 +29,7 @@ import category from './category';
 import videoEmbed from './video-embed';
 import bannerblock from './bannerblock';
 import asset from './asset'
+import restrictedPage from './restrictedPage';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -64,6 +65,7 @@ export default createSchema({
     category,
     videoEmbed,
     bannerblock,
-    asset
+    asset,
+    restrictedPage
   ])
 });
