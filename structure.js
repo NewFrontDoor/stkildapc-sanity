@@ -1,6 +1,6 @@
 import React from 'react';
 import S from '@sanity/desk-tool/structure-builder';
-import {FaCogs} from 'react-icons/fa';
+import { FaCogs } from 'react-icons/fa';
 import {
   MdMap,
   MdReceipt,
@@ -10,6 +10,9 @@ import {
   MdCollectionsBookmark,
   MdInsertDriveFile
 } from 'react-icons/md';
+import {
+  FaLock
+} from 'react-icons/fa'
 
 export default () => {
   return S.list()
@@ -51,6 +54,10 @@ export default () => {
         .icon(MdInsertDriveFile)
         .child(S.documentTypeList('page').title('Pages')),
       S.listItem()
+        .title('Restricted Pages')
+        .icon(FaLock)
+        .child(S.documentTypeList('restrictedPage').title('Restricted Pages')),
+      S.listItem()
         .title('Body content blocks')
         .icon(MdCollectionsBookmark)
         .child(
@@ -68,7 +75,7 @@ export default () => {
                 .child(
                   S.documentTypeList('bannerblock')
                     .title('Banners and Popovers')
-                    .defaultOrdering([{field: 'title', direction: 'asc'}])
+                    .defaultOrdering([{ field: 'title', direction: 'asc' }])
                 )
             ])
         ),
@@ -96,7 +103,7 @@ export default () => {
                 .child(
                   S.documentTypeList('series')
                     .title('Series')
-                    .defaultOrdering([{field: '_updatedAt', direction: 'desc'}])
+                    .defaultOrdering([{ field: '_updatedAt', direction: 'desc' }])
                 )
             ])
         ),
@@ -106,7 +113,7 @@ export default () => {
         .child(
           S.documentTypeList('sermons')
             .title('Sermons')
-            .defaultOrdering([{field: '_updatedAt', direction: 'desc'}])
+            .defaultOrdering([{ field: '_updatedAt', direction: 'desc' }])
         ),
       S.divider(),
       S.listItem()
@@ -114,21 +121,21 @@ export default () => {
         .child(
           S.documentTypeList('event')
             .title('Events')
-            .defaultOrdering([{field: '_updatedAt', direction: 'desc'}])
+            .defaultOrdering([{ field: '_updatedAt', direction: 'desc' }])
         ),
       S.listItem()
         .title('Articles')
         .child(
           S.documentTypeList('article')
             .title('Article')
-            .defaultOrdering([{field: '_updatedAt', direction: 'desc'}])
+            .defaultOrdering([{ field: '_updatedAt', direction: 'desc' }])
         ),
       S.listItem()
         .title('Videos')
         .child(
           S.documentTypeList('video')
             .title('Videos')
-            .defaultOrdering([{field: '_updatedAt', direction: 'desc'}])
+            .defaultOrdering([{ field: '_updatedAt', direction: 'desc' }])
         ),
       S.divider(),
       S.listItem()
