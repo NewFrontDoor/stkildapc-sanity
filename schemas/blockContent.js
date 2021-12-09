@@ -65,7 +65,7 @@ export default {
               {
                 name: 'reference',
                 type: 'reference',
-                to: [{type: 'page'}]
+                to: [{type: 'page'}, {type: 'restrictedPage'}]
               }
             ]
           },
