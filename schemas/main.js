@@ -59,7 +59,7 @@ export default {
                   description: 'Pick a page from the dropdown list below',
                   to: [
                     {
-                      type: 'page'
+                      type: 'page', type: 'restrictedPage'
                     }
                   ]
                 },
@@ -152,7 +152,7 @@ export default {
               type: 'reference',
               to: [
                 {
-                  type: 'page'
+                  type: 'page', type: 'restrictedPage'
                 }
               ]
             }
