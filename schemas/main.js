@@ -58,9 +58,7 @@ export default {
                   title: 'Child page',
                   description: 'Pick a page from the dropdown list below',
                   to: [
-                    {
-                      type: 'page', type: 'restrictedPage'
-                    }
+                    {type: 'page'}, {type: 'restrictedPage'}
                   ]
                 },
                 {
@@ -151,9 +149,7 @@ export default {
               name: 'childpages',
               type: 'reference',
               to: [
-                {
-                  type: 'page', type: 'restrictedPage'
-                }
+                {type: 'page'}, {type: 'restrictedPage'}
               ]
             }
           ]
