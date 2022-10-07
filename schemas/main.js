@@ -149,7 +149,7 @@ export default {
               name: 'childpages',
               type: 'reference',
               to: [
-                {type: 'page'}, {type: 'restrictedPage'}
+                {type: 'page'}, {type: 'restrictedPage'}, {type: 'externalPage'}
               ]
             }
           ]
